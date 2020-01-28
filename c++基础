@@ -1,0 +1,29 @@
+使用C++和C语言输入输出16进制数、8进制数
+
+#include <iostream>
+
+#include<cstdio>
+
+using namespace std;
+
+int main()
+
+{
+
+	int a, b;
+
+	cin >> hex >> a >> b;//输入 16进制 ，输入8进制 则把hex改为oct
+
+	int c;
+
+	c = a + b;
+
+	cout <<hex<<c << endl;   //输出16进制
+
+	cout << dec << c << endl;  //输出10进制
+
+	cout << oct << c << endl;  //输出8进制
+
+	return 0;
+
+}
