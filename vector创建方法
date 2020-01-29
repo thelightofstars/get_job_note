@@ -1,0 +1,32 @@
+# get_job_note
+for c++
+1 vector二维数组的创建和初始化
+std::vector <int> vec(10,90); //将10个一维动态数组初始为90
+std::vector<std::vector<int> > vec(row,vector<int>(col,0)); //初始化row * col二维动态数组，初始化值为0
+2 获取一维数组的长度
+int size = vec.size();
+3 获取二维数组的长度
+int size_row = vec.size(); //获取行数
+int size_col = vec[0].size(); //获取列数
+ 
+4 给vector二维数组赋值
+简单的就直接赋值
+ans[0][0]=1;
+ans[0][1]=2;
+ans[1][0]=3;
+ans[1][1]=4;
+
+
+案例：
+#include<iostream>
+#include <string.h>
+#include<vector>
+using namespace std;
+int main()
+{
+	vector <int> vec(10, 0);
+	vector <vector<int>> vect(5, vector<int>(6, 0));
+	cout << vect.size() << endl;
+	cout << vect[0].size() << endl;
+  
+}
