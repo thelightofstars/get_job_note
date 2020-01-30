@@ -1,0 +1,80 @@
+# get_job_note
+for c++
+
+1、栈的使用
+c++  stl栈stack的头文件为: 
+#include <stack> 
+c++ stl栈stack的成员函数介绍
+操作 比较和分配堆栈
+empty() 堆栈为空则返回真
+pop() 移除栈顶元素 （删除）
+push() 在栈顶增加元素 （增加）
+size() 返回栈中元素数目
+top() 返回栈顶元素，不删除（获取）
+
+
+案例：
+剑指offer
+输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
+
+
+#include<iostream>
+#include <string.h>
+#include<vector>
+#include<stack>
+using namespace std;
+
+struct ListNode {
+	int val;
+	struct ListNode* next;
+	ListNode(int x) :
+		val(x), next(NULL) {
+	}
+};
+class Solution {
+public:
+	vector<int> printListFromTailToHead(ListNode* head) {
+		vector<int> result;
+		stack<int> arr;
+		ListNode* l;
+		l = head;
+		int val;
+		while (l!= nullptr)
+		{
+			arr.push( l->val);
+			l = l->next;
+		}
+		while (arr.empty() != 1)
+		{
+			val = arr.top();
+			arr.pop();
+			result.push_back (val);
+			//cout << val << endl;
+		}
+		return result;
+
+	}
+};
+
+void creatList(ListNode*& head)
+{
+
+}
+int main()
+{ 
+	ListNode* s1 = new ListNode(1);
+	ListNode* s2 = new ListNode(2);
+	ListNode* s3 = new ListNode(3);
+	ListNode* s4 = new ListNode(4);
+
+	s1->next = s2;
+	s2->next = s3;
+	s3->next = s4;
+	s4->next = NULL;
+	Solution sol;
+	vector<int> vec=sol.printListFromTailToHead(s1);
+	for (int i = 0; i < vec.size(); i++) cout << vec[i] << endl;
+}
+
+
+
