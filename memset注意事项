@@ -16,4 +16,5 @@ for c++
 	int arr[127] = { 0 };
   重置：
 		memset(arr, 0, 127 * sizeof(int));
+		memset(arr, 0,  sizeof(a));//重置数组
 		memset(a, 0, 1000);
