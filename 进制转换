@@ -2,6 +2,8 @@
 for c++
 
 使用C++和C语言输入输出16进制数、8进制数
+链接：
+https://www.csdn.net/gather_26/NtTaMg5sMjQtYmxvZwO0O0OO0O0O.html
 
 #include <iostream>
 
@@ -30,3 +32,4 @@ int main()
 	return 0;
 
 }
+
