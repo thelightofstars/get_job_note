@@ -1,5 +1,20 @@
 # get_job_note
 for c++
+一vector两种赋值方法：
+1.push_back(element)方法像vector末尾添加元素；
+2.vector vec(address1,address2)，通过截取数组中一顿连续的数值赋值给vector，地址所指元素同样遵循左闭右开。
+二示例代码如下：
+#include
+#include
+#include
+using namespace std;
+int main()
+{
+int arr[6] = { 1, 2, 3, 4, 5, 6 };
+vector vec(arr+1,arr+4);
+
+
+
 1 vector二维数组的创建和初始化
 std::vector <int> vec(10,90); //将10个一维动态数组初始为90
 std::vector<std::vector<int> > vec(row,vector<int>(col,0)); //初始化row * col二维动态数组，初始化值为0
