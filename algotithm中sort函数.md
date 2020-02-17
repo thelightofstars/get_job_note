@@ -1,4 +1,3 @@
-# get_job_note
 // for c++
 
 ##### 需要头文件
